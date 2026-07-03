@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Block Block - Gizlilik Politikası (Privacy Policy)</title>
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&family=Plus+Jakarta+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+  
+  <style>
+    :root {
+      --bg-dark: #07020d;
+      --bg-card: rgba(255, 255, 255, 0.03);
+      --border-card: rgba(255, 255, 255, 0.08);
+      --text-main: #f5f0fa;
+      --text-muted: rgba(245, 240, 250, 0.7);
+      
+      --neon-cyan: #00f0ff;
+      --neon-purple: #bd00ff;
+      --neon-magenta: #ff007a;
+      
+      --glow-cyan: 0 0 10px rgba(0, 240, 255, 0.3);
+      --glow-purple: 0 0 15px rgba(189, 0, 255, 0.3);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      background: var(--bg-dark);
+      background-image: 
+        radial-gradient(circle at 10% 20%, rgba(189, 0, 255, 0.08) 0%, transparent 40%),
+        radial-gradient(circle at 90% 80%, rgba(0, 240, 255, 0.08) 0%, transparent 40%);
+      color: var(--text-main);
+      line-height: 1.6;
+      padding: 40px 20px;
+      display: flex;
+      justify-content: center;
+    }
+
+    .container {
+      max-width: 800px;
+      width: 100%;
+    }
+
+    header {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    .logo-container {
+      margin-bottom: 16px;
+    }
+
+    .logo-icon {
+      width: 80px;
+      height: 80px;
+      border-radius: 24px;
+      background: linear-gradient(135deg, var(--neon-purple), var(--neon-magenta));
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 2rem;
+      font-weight: 800;
+      color: white;
+      box-shadow: var(--glow-purple);
+      border: 2px solid rgba(255, 255, 255, 0.2);
+    }
+
+    h1 {
+      font-family: 'Outfit', sans-serif;
+      font-size: 2.2rem;
+      font-weight: 800;
+      letter-spacing: -0.5px;
+      background: linear-gradient(135deg, #ffffff 30%, var(--neon-cyan) 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      margin-bottom: 8px;
+    }
+
+    .subtitle {
+      font-size: 1rem;
+      color: var(--text-muted);
+    }
+
+    .lang-switcher {
+      display: flex;
+      justify-content: center;
+      gap: 12px;
+      margin-bottom: 30px;
+    }
+
+    .lang-btn {
+      background: var(--bg-card);
+      border: 1px solid var(--border-card);
+      color: var(--text-main);
+      padding: 8px 16px;
+      border-radius: 30px;
+      cursor: pointer;
+      font-size: 0.85rem;
+      font-weight: 600;
+      transition: all 0.3s;
+    }
+
+    .lang-btn.active, .lang-btn:hover {
+      background: rgba(0, 240, 255, 0.1);
+      border-color: var(--neon-cyan);
+      box-shadow: var(--glow-cyan);
+      color: var(--neon-cyan);
+    }
+
+    .content-section {
+      background: var(--bg-card);
+      border: 1px solid var(--border-card);
+      backdrop-filter: blur(10px);
+      border-radius: 24px;
+      padding: 32px;
+      margin-bottom: 30px;
+    }
+
+    .policy-content {
+      display: none;
+    }
+
+    .policy-content.active {
+      display: block;
+    }
+
+    h2 {
+      font-family: 'Outfit', sans-serif;
+      font-size: 1.4rem;
+      color: var(--neon-cyan);
+      margin-top: 24px;
+      margin-bottom: 12px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+      padding-bottom: 6px;
+    }
+
+    h2:first-of-type {
+      margin-top: 0;
+    }
+
+    p {
+      margin-bottom: 16px;
+      font-size: 0.95rem;
+      color: var(--text-muted);
+    }
+
+    ul {
+      margin-bottom: 16px;
+      padding-left: 20px;
+      color: var(--text-muted);
+      font-size: 0.95rem;
+    }
+
+    li {
+      margin-bottom: 8px;
+    }
+
+    footer {
+      text-align: center;
+      margin-top: 40px;
+      font-size: 0.8rem;
+      color: rgba(245, 240, 250, 0.4);
+    }
+
+    @media (max-width: 600px) {
+      body {
+        padding: 20px 10px;
+      }
+      .content-section {
+        padding: 20px;
+      }
+      h1 {
+        font-size: 1.8rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="logo-container">
+        <div class="logo-icon">B</div>
+      </div>
+      <h1>BLOCK BLOCK</h1>
+      <p class="subtitle">Gizlilik Politikası / Privacy Policy</p>
+    </header>
+
+    <div class="lang-switcher">
+      <button class="lang-btn active" onclick="switchLang('tr')">Türkçe</button>
+      <button class="lang-btn" onclick="switchLang('en')">English</button>
+    </div>
+
+    <div class="content-section">
+      <!-- TÜRKÇE GİZLİLİK POLİTİKASI -->
+      <div id="policy-tr" class="policy-content active">
+        <h2>1. Giriş</h2>
+        <p>Sun's App ("biz", "bize" veya "bizim") tarafından geliştirilen <strong>Block Block</strong> bulmaca oyununa hoş geldiniz. Bu Gizlilik Politikası, mobil uygulamamızı kullanırken bilgilerinizin nasıl toplandığı, kullanıldığı ve korunduğu hakkında sizi bilgilendirmek amacıyla hazırlanmıştır.</p>
+
+        <h2>2. Toplanan Bilgiler</h2>
+        <p><strong>Kişisel Bilgiler:</strong> Block Block, doğrudan adınız, e-posta adresiniz, telefon numaranız veya fiziksel konumunuz gibi kişisel olarak tanımlanabilir hiçbir bilgiyi toplamaz, saklamaz veya harici sunuculara göndermez.</p>
+        <p><strong>Yerel Depolama (Local Storage):</strong> Oyundaki en yüksek skorlarınız, kazandığınız başarımlar (ödüller) ve oyun içi joker (bomba, değiştirme) miktarlarınız gibi ilerleme verileriniz tamamen cihazınızın kendi belleğinde (yerel depolama) saklanır. Cihazınızdan silinmediği sürece bu veriler tamamen sizin kontrolünüzdedir.</p>
+
+        <h2>3. Reklamlar ve Üçüncü Taraf Hizmetleri</h2>
+        <p>Uygulamamız oyun içi dinamikleri desteklemek amacıyla simüle edilmiş sponsor alanları ve reklam akışları içerir. Gelecekte gerçek reklam sağlayıcılarının (örneğin Google AdMob) entegre edilmesi durumunda, bu üçüncü taraf servisler kendi gizlilik politikalarına tabi olarak cihaz kimliklerini (Reklam Kimliği - AdID) reklam hedeflemesi ve analitiği amacıyla toplayabilirler.</p>
+
+        <h2>4. Çocukların Gizliliği</h2>
+        <p>Block Block her yaştan oyuncunun keyifle oynayabileceği aile dostu bir bulmaca oyunudur. 13 yaşın altındaki çocuklardan bilerek kişisel bilgi toplamayız. Eğer bir çocuğun bize kişisel bilgi verdiğini fark ederseniz, lütfen bizimle hemen iletişime geçin.</p>
+
+        <h2>5. Değişiklikler</h2>
+        <p>Bu Gizlilik Politikası'nı zaman zaman güncelleyebiliriz. Herhangi bir değişiklik olması durumunda bu sayfada yeni politikayı yayınlayarak sizi bilgilendireceğiz.</p>
+
+        <h2>6. İletişim</h2>
+        <p>Bu Gizlilik Politikası ile ilgili herhangi bir sorunuz veya geri bildiriminiz olması durumunda bizimle iletişime geçebilirsiniz:</p>
+        <p>E-posta: <strong>support.sunsapp@gmail.com</strong></p>
+      </div>
+
+      <!-- ENGLISH PRIVACY POLICY -->
+      <div id="policy-en" class="policy-content">
+        <h2>1. Introduction</h2>
+        <p>Welcome to <strong>Block Block</strong>, a puzzle game developed by Sun's App ("we", "us", or "our"). This Privacy Policy is designed to inform you about how your information is collected, used, and protected while using our mobile application.</p>
+
+        <h2>2. Information Collection and Use</h2>
+        <p><strong>Personal Data:</strong> Block Block does not collect, store, or transmit any personally identifiable information, such as your name, email address, phone number, or physical location, to any external servers.</p>
+        <p><strong>Local Storage:</strong> Your game progress data, such as high scores, unlocked achievements, and power-up counts (bombs, shuffles), is stored locally on your device. This data remains entirely under your control unless deleted from your device.</p>
+
+        <h2>3. Advertisements and Third-Party Services</h2>
+        <p>Our app includes simulated sponsor areas and advertising streams to support gameplay dynamics. If real ad providers (such as Google AdMob) are integrated in the future, these third-party services may collect device identifiers (Advertising ID - AdID) for ad targeting and analytics purposes under their own privacy policies.</p>
+
+        <h2>4. Children's Privacy</h2>
+        <p>Block Block is a family-friendly puzzle game suitable for players of all ages. We do not knowingly collect personal information from children under 13. If you become aware that a child has provided us with personal information, please contact us immediately.</p>
+
+        <h2>5. Changes to This Privacy Policy</h2>
+        <p>We may update our Privacy Policy from time to time. We will notify you of any changes by posting the new Privacy Policy on this page.</p>
+
+        <h2>6. Contact Us</h2>
+        <p>If you have any questions or suggestions about our Privacy Policy, do not hesitate to contact us:</p>
+        <p>Email: <strong>support.sunsapp@gmail.com</strong></p>
+      </div>
+    </div>
+
+    <footer>
+      <span>Son Güncelleme: Temmuz 2026 / Last Updated: July 2026</span>
+    </footer>
+  </div>
+
+  <script>
+    function switchLang(lang) {
+      // Toggle buttons
+      const buttons = document.querySelectorAll('.lang-btn');
+      buttons.forEach(btn => btn.classList.remove('active'));
+      
+      const activeButton = Array.from(buttons).find(btn => btn.getAttribute('onclick').includes(lang));
+      if (activeButton) activeButton.classList.add('active');
+
+      // Toggle content
+      const contents = document.querySelectorAll('.policy-content');
+      contents.forEach(content => content.classList.remove('active'));
+      
+      const activeContent = document.getElementById('policy-' + lang);
+      if (activeContent) activeContent.classList.add('active');
+    }
+  </script>
+</body>
+</html>
